@@ -20,42 +20,85 @@
                 <main class="m-auto d-flex my_boolzapp">
 
                 <!-- ? PARTE SINISTRA -->
-                    <section class="my_lt-sect">
+                    <section class="my_lt-sect autoverflow">
                         <header class="my_lt-header">
                             <section class="d-flex justify-content-between align-items-center my_profile">
                                 <div class="d-flex align-items-center my_me">
                                     <div class="my_me-img-container">
                                         <!-- immagine del profilo -->
+                                        <img src="img/avatar_io.jpg" alt="sofia profile img">
                                     </div>
                                     <div class="my_me-name">
                                         <!-- nome del mio profilo -->
+                                        Sofia
                                     </div>
                                 </div>
-                                <div class="my_icons">
+                                <div class="d-flex my_icons">
                                     <!-- icone opzioni profilo -->
+                                    <i class="fa-solid fa-circle-notch"></i>
+                                    <i class="fa-solid fa-message"></i>
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
                                 </div>
                             </section>
                             <section class="d-flex justify-content-start align-items-center my_notifs">
-                                <div class="my_notifs-img-container">
+                                <div class="d-flex my_notifs-img-container">
                                     <!-- immagine notifiche bloccate -->
+                                    <i class="fa-solid fa-bell-slash m-auto"></i>
                                 </div>
-                                <div class="my_notifs-text">
-                                    <!-- testo notifiche -->
+                                <div class="d-flex flex-column justify-content-center my_notifs-text">
+                                    <p class="m-0 my_notif-text">
+                                        <!-- testo notifiche -->
+                                        Ricevi notifiche di nuovi messaggi
+                                    </p>
+                                    <a class="my_notif-link" href="#">
+                                        <!-- testo notifiche -->
+                                        Attiva notifiche desktop
+                                    </a>
                                 </div>
                             </section>
                             <section class="d-flex justify-content-center align-items-center my_searchbar">
                                 <!-- input text di bootstrap -->
+                                <div class="input-group">
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </span>
+                                    <input type="text"
+                                        class="form-control"
+                                        placeholder="Cerca o inizia una nuova chat"
+                                        aria-label="Chat"
+                                        aria-describedby="basic-addon1"
+                                    />
+                                  </div>
                             </section>
                         </header>
-                        <main class="d-flex flex-column my_chats">
-                            <!-- div con v-for che itera nell'array per le varie chat con i contatti -->
+                        <main class="d-flex flex-column justify-content-stretch my_chats">
+                            <!-- * div con v-for che itera nell'array per le varie chat con i contatti (PARTE DI Vue.js)-->
+                            <div class="d-flex justify-content-start align-items-center my_single-chat" v-for="(contact, index) in contacts">
+                                <div class="my_single-chat-img-container">
+                                    <!-- immagine del profilo delle varie chat -->
+                                    <img :src="contacts[index].avatar" alt="avatar di michele">
+                                </div>
+                                <div class="my_single-chat-text">
+                                    <p class="m-0 my_contanct-name">
+                                        <!-- Nome Contatto dall'array -->
+                                        {{contacts[index].name}}
+                                    </p>
+                                    <p class="m-0 my_last-message-sent" href="#">
+                                        Ultimo messaggio inviato
+                                    </p>
+                                </div>
+                                <p class="m-0 my_time">
+                                    12:00
+                                </p>
+                            </div>
+                            <!-- */ (PARTE DI Vue.js)-->
                         </main>
                     </section>
                 <!-- ?/ PARTE SINISTRA -->
 
                 <!-- ? PARTE DESTRA -->
-                    <section class="my_rt-section">
-                        <header class="d-flex justify-content-between align-items-center my_chat-with">
+                    <section class="my_rt-sect">
+                        <header class="d-flex justify-content-between align-items-center my_rt-header">
                             <div class="d-flex align-items-center my_current-chat">
                                 <div class="my_current-chat-img-container">
                                     <!-- immagine del profilo -->
@@ -68,7 +111,7 @@
                                 <!-- icone opzioni chat -->
                             </div>
                         </header>
-                        <main class="my_chat-area">
+                        <main class="autoverflow my_chat-area">
                             <!-- testo della chat corrente -->
                         </main>
                         <footer class="my_messages-input-area">
@@ -84,7 +127,7 @@
                         </footer>
                     </section>
                 <!-- ?/ PARTE DESTRA -->
-                
+
                 </main>
 
             </div>
