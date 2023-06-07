@@ -102,27 +102,45 @@
                             <div class="d-flex align-items-center my_current-chat">
                                 <div class="my_current-chat-img-container">
                                     <!-- immagine del profilo -->
+                                    <img src="img/avatar_1.jpg" alt="michele's profile img">
                                 </div>
-                                <div class="my_current-chat-name">
-                                    <!-- nome del profilo -->
+                                <div class="d-flex flex-column">
+                                    <p class="m-0 my_current-chat-name">
+                                        <!-- nome del profilo -->
+                                        Michele
+                                    </p>
+                                    <p class="m-0 my_last-access">
+                                        <!-- ultimo accesso -->
+                                        Ultimo accesso oggi alle 12:00
+                                    </p>
                                 </div>
                             </div>
-                            <div class="my_icons">
+                            <div class="d-flex my_icons">
                                 <!-- icone opzioni chat -->
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <i class="fa-solid fa-paperclip"></i>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
                             </div>
                         </header>
                         <main class="autoverflow my_chat-area">
                             <!-- testo della chat corrente -->
                         </main>
-                        <footer class="my_messages-input-area">
-                            <div class="my_emoji-button">
+                        <footer class="d-flex align-items-center my_messages-input-area">
+                            <div class="my_emoji my_button">
                                 <!-- bottone delle emoji -->
+                                <i class="fa-regular fa-face-smile"></i>
                             </div>
-                            <div class="my_message-input-text">
-                                <!-- input text dei messaggi da inviare -->
+                            <div class="input-group m-auto">
+                                <input type="text"
+                                    class="form-control"
+                                    placeholder="Scrivi un messaggio"
+                                    aria-label="Message"
+                                    aria-describedby="basic-addon1"
+                                />
                             </div>
-                            <div class="my_audio-button">
+                            <div class="my_audio my_button">
                                 <!-- bottone degli audio -->
+                                <i class="fa-solid fa-microphone"></i>
                             </div>
                         </footer>
                     </section>
