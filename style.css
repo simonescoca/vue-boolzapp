@@ -29,6 +29,7 @@ img{
     object-fit: cover;
     object-position: center;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .my_icons{
@@ -37,9 +38,20 @@ img{
     color: #b1b1b1;
 }
 
+i{
+    cursor: pointer;
+}
+
+header i:hover{
+    color: #777777;
+}
+
+footer i:hover{
+    color: #3f3f3f;
+}
+
 /* ? PARTE SINISTRA ...............................*/
 section.my_lt-sect{
-    border: 1px solid black;
     width: 30%;
     height: 100%;
 }
@@ -50,6 +62,7 @@ section.my_lt-sect{
 
 .my_profile{
     padding: 1rem;
+    border-right: 1px solid rgb(203, 203, 203);
 }
 
 .my_me-img-container{
@@ -77,6 +90,10 @@ section.my_lt-sect{
     font-size: .85rem;
 }
 
+.my_notif-link:hover{
+    color: #666666;
+}
+
 .my_searchbar{
     padding: .5rem .5rem;
     background-color: #fafafa;
@@ -89,12 +106,14 @@ section.my_lt-sect{
 .my_chats{
     background-color: #ffffff;
     height: calc(100% - 216px);
+    cursor: pointer;
 }
 
 .my_single-chat{
     padding: 1rem;
     background-color: #ffffff;
     position: relative;
+    border-top: 1px solid rgb(233, 233, 233);
 }
 
 .my_single-chat-img-container{
@@ -117,13 +136,18 @@ section.my_lt-sect{
 
 /* ? PARTE DESTRA ...............................*/
 section.my_rt-sect{
-    border: 1px solid black;
     width: 70%;
     height: 100%;
 }
 
 .my_rt-header{
     height: 82px;
+    padding: 1rem;
+}
+
+.my_current-chat-img-container{
+    height: 50px;
+    margin-right: .5rem;
 }
 
 .my_chat-area{
@@ -131,7 +155,18 @@ section.my_rt-sect{
     height: calc(100% - 164px);
 }
 
+.my_last-access{
+    color: #a0a0a0;
+    font-size: .85rem;
+}
+
 footer{
     height: 82px;
     background-color: #eaeaea;
+}
+
+.my_button{
+    padding: 0 2.5rem;
+    font-size: 1.4rem;
+    color: #6b7376;
 }
