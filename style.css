@@ -153,6 +153,24 @@ section.my_rt-sect{
 .my_chat-area{
     background-image: url(img/mine.jpg);
     height: calc(100% - 164px);
+    padding: 1rem 3rem;
+}
+
+.my_message{
+    padding: .6rem 1.4rem;
+    border-radius: 10px;
+    width: fit-content;
+    margin-bottom: .5rem;
+}
+
+.my_mine{
+    background-color: #d5f9ba;
+    align-self: flex-end;
+}
+
+.my_yours{
+    background-color: #ffffff;
+    align-self: flex-start;
 }
 
 .my_last-access{
