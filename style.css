@@ -5,7 +5,7 @@
 
 /* ? BODY ...............................*/
 body{
-    background-image: linear-gradient(180deg, #009688 20%, #dbdbd2 20%);
+    background-image: linear-gradient(180deg, #009688 15%, #dbdbd2 15%);
 }
 
 /* ? DIV.CONTAINER ...............................*/
@@ -15,6 +15,123 @@ body{
 
 /* ? ENTIRE APP ...............................*/
 .my_boolzapp{
-    width: 90%;
-    height: 80%;
+    width: 100%;
+    height: 90%;
+}
+
+header{
+    background-color: #eaeaea;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
+.my_icons{
+    gap: 1.5rem;
+    font-size: 1.3rem;
+    color: #b1b1b1;
+}
+
+/* ? PARTE SINISTRA ...............................*/
+section.my_lt-sect{
+    border: 1px solid black;
+    width: 30%;
+    height: 100%;
+}
+
+.my_lt-header > *{
+    padding: 0 1rem;
+}
+
+.my_profile{
+    padding: 1rem;
+}
+
+.my_me-img-container{
+    height: 50px;
+    margin-right: .5rem;
+}
+
+.my_notifs{
+    height: 80px;
+    background-color: #8edafc;
+    gap: 1rem;
+}
+
+.my_notifs-img-container{
+    color: #8edafc;
+    background-color: #f2fbff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+
+.my_notif-link{
+    color: #5f8fa4;
+    font-size: .85rem;
+}
+
+.my_searchbar{
+    padding: .5rem .5rem;
+    background-color: #fafafa;
+}
+
+#basic-addon1{
+    cursor: pointer;
+}
+
+.my_chats{
+    background-color: #ffffff;
+    height: calc(100% - 216px);
+}
+
+.my_single-chat{
+    padding: 1rem;
+    background-color: #ffffff;
+    position: relative;
+}
+
+.my_single-chat-img-container{
+    height: 50px;
+    margin-right: .5rem;
+}
+
+.my_last-message-sent{
+    color: #bdbcbe;
+    font-size: .85rem;
+}
+
+.my_time{
+    color: #bdbcbe;
+    font-size: .85rem;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+/* ? PARTE DESTRA ...............................*/
+section.my_rt-sect{
+    border: 1px solid black;
+    width: 70%;
+    height: 100%;
+}
+
+.my_rt-header{
+    height: 82px;
+}
+
+.my_chat-area{
+    background-image: url(img/mine.jpg);
+    height: calc(100% - 164px);
+}
+
+footer{
+    height: 82px;
+    background-color: #eaeaea;
 }
