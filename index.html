@@ -15,7 +15,79 @@
         </script>
         <div id="app">
         <!-- <VueJS APP> -->
-            
+            <div class="container d-flex my_ancestor">
+
+                <main class="m-auto d-flex my_boolzapp">
+
+                <!-- ? PARTE SINISTRA -->
+                    <section class="my_lt-sect">
+                        <header class="my_lt-header">
+                            <section class="d-flex justify-content-between align-items-center my_profile">
+                                <div class="d-flex align-items-center my_me">
+                                    <div class="my_me-img-container">
+                                        <!-- immagine del profilo -->
+                                    </div>
+                                    <div class="my_me-name">
+                                        <!-- nome del mio profilo -->
+                                    </div>
+                                </div>
+                                <div class="my_icons">
+                                    <!-- icone opzioni profilo -->
+                                </div>
+                            </section>
+                            <section class="d-flex justify-content-start align-items-center my_notifs">
+                                <div class="my_notifs-img-container">
+                                    <!-- immagine notifiche bloccate -->
+                                </div>
+                                <div class="my_notifs-text">
+                                    <!-- testo notifiche -->
+                                </div>
+                            </section>
+                            <section class="d-flex justify-content-center align-items-center my_searchbar">
+                                <!-- input text di bootstrap -->
+                            </section>
+                        </header>
+                        <main class="d-flex flex-column my_chats">
+                            <!-- div con v-for che itera nell'array per le varie chat con i contatti -->
+                        </main>
+                    </section>
+                <!-- ?/ PARTE SINISTRA -->
+
+                <!-- ? PARTE DESTRA -->
+                    <section class="my_rt-section">
+                        <header class="d-flex justify-content-between align-items-center my_chat-with">
+                            <div class="d-flex align-items-center my_current-chat">
+                                <div class="my_current-chat-img-container">
+                                    <!-- immagine del profilo -->
+                                </div>
+                                <div class="my_current-chat-name">
+                                    <!-- nome del profilo -->
+                                </div>
+                            </div>
+                            <div class="my_icons">
+                                <!-- icone opzioni chat -->
+                            </div>
+                        </header>
+                        <main class="my_chat-area">
+                            <!-- testo della chat corrente -->
+                        </main>
+                        <footer class="my_messages-input-area">
+                            <div class="my_emoji-button">
+                                <!-- bottone delle emoji -->
+                            </div>
+                            <div class="my_message-input-text">
+                                <!-- input text dei messaggi da inviare -->
+                            </div>
+                            <div class="my_audio-button">
+                                <!-- bottone degli audio -->
+                            </div>
+                        </footer>
+                    </section>
+                <!-- ?/ PARTE DESTRA -->
+                
+                </main>
+
+            </div>
         <!-- </VueJS APP> -->
         </div>
         <script src="script.js">
