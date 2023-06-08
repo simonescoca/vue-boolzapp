@@ -73,7 +73,9 @@
                         </header>
                         <main class="d-flex flex-column justify-content-stretch my_chats">
                             <!-- * div con v-for che itera nell'array per le varie chat con i contatti (PARTE DI Vue.js)-->
-                            <div class="d-flex justify-content-start align-items-center my_single-chat" v-for="(contact, index) in contacts">
+                            <div class="d-flex justify-content-start align-items-center my_single-chat"
+                            v-for="(contact, index) in contacts"
+                            @click="getActiveIndex(index)" :class="index === activeIndex ? 'my_active-single-chat' : ''">
                                 <div class="my_single-chat-img-container">
                                     <!-- immagine del profilo delle varie chat -->
                                     <img :src="contacts[index].avatar" alt="avatar di michele">
@@ -102,12 +104,12 @@
                             <div class="d-flex align-items-center my_current-chat">
                                 <div class="my_current-chat-img-container">
                                     <!-- immagine del profilo -->
-                                    <img src="img/avatar_1.jpg" alt="michele's profile img">
+                                    <img :src="contacts[activeIndex].avatar" :alt="`${contacts[activeIndex].name}'s profile img`">
                                 </div>
                                 <div class="d-flex flex-column">
                                     <p class="m-0 my_current-chat-name">
                                         <!-- nome del profilo -->
-                                        Michele
+                                        {{contacts[activeIndex].name}}
                                     </p>
                                     <p class="m-0 my_last-access">
                                         <!-- ultimo accesso -->
@@ -124,16 +126,20 @@
                         </header>
                         <main class="autoverflow my_chat-area d-flex flex-column">
                             <!-- testo della chat corrente -->
-                            <div class="my_message my_mine">
-                                Hai portato a spasso il cane?
+                            <div class="my_message"
+                            v-for="(message, messageIndex) in contacts[activeIndex].messages"
+                            :class="message.status === 'received' ? 'my_yours' : 'my_mine'">
+                                <!-- Hai portato a spasso il cane? -->
+                                {{message.message}}
                             </div>
-                            <div class="my_message my_mine">
+                            <!-- <div class="my_message my_mine">
                                 Ricordati di stendere i panni
                             </div>
                             <div class="my_message my_yours">
                                 Tutto fatto!
-                            </div>
+                            </div> -->
                         </main>
+
                         <footer class="d-flex align-items-center my_messages-input-area">
                             <div class="my_emoji my_button">
                                 <!-- bottone delle emoji -->
