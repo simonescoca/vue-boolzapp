@@ -239,13 +239,28 @@ createApp ({
                     ],
                 }
             ],
-            activeIndex: 0
+            activeIndex: 0,
+            newMessage: "",
         }
     },
 
     methods: {
         getActiveIndex (chatIndex) {
             this.activeIndex = chatIndex
+        },
+
+        sendNewMessage () {
+            this.contacts[this.activeIndex].messages.push({message: this.newMessage, status: "sent"})
+            this.newMessage = ""
+        },
+
+        receiveNewMessage () {
+            this.contacts[this.activeIndex].messages.push({message: "ok", status: "received"})
+        },
+
+        handleKeyDown () {
+            this.sendNewMessage()
+            setTimeout(this.receiveNewMessage, 2000)
         }
     }
 }).mount ("#app")
