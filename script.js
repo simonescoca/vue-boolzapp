@@ -241,6 +241,7 @@ createApp ({
             ],
             activeIndex: 0,
             newMessage: "",
+            nome: ""
         }
     },
 
@@ -259,7 +260,7 @@ createApp ({
         },
 
         handleKeyDown () {
-            this.sendNewMessage()
+            this.sendNewMessage ()
             setTimeout(this.receiveNewMessage, 2000)
         }
     }
