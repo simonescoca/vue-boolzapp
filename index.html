@@ -67,6 +67,7 @@
                                         placeholder="Cerca o inizia una nuova chat"
                                         aria-label="Chat"
                                         aria-describedby="basic-addon1"
+                                        v-model="nome"
                                     />
                                   </div>
                             </section>
@@ -75,7 +76,9 @@
                             <!-- * div con v-for che itera nell'array per le varie chat con i contatti (PARTE DI Vue.js)-->
                             <div class="d-flex justify-content-start align-items-center my_single-chat"
                             v-for="(contact, index) in contacts"
-                            @click="getActiveIndex(index)" :class="index === activeIndex ? 'my_active-single-chat' : ''">
+                            @click="getActiveIndex(index)"
+                            :class="{'my_active-single-chat': activeIndex === index, 'd-none': !contact.name.includes(nome)}">
+                            <!-- 'd-none': contact.name !== nome && nome !== '' -->
                                 <div class="my_single-chat-img-container">
                                     <!-- immagine del profilo delle varie chat -->
                                     <img :src="contacts[index].avatar" alt="avatar di michele">
