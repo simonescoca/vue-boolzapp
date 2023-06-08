@@ -129,15 +129,8 @@
                             <div class="my_message"
                             v-for="(message, messageIndex) in contacts[activeIndex].messages"
                             :class="message.status === 'received' ? 'my_yours' : 'my_mine'">
-                                <!-- Hai portato a spasso il cane? -->
                                 {{message.message}}
                             </div>
-                            <!-- <div class="my_message my_mine">
-                                Ricordati di stendere i panni
-                            </div>
-                            <div class="my_message my_yours">
-                                Tutto fatto!
-                            </div> -->
                         </main>
 
                         <footer class="d-flex align-items-center my_messages-input-area">
@@ -151,6 +144,8 @@
                                     placeholder="Scrivi un messaggio"
                                     aria-label="Message"
                                     aria-describedby="basic-addon1"
+                                    v-model="newMessage"
+                                    @keydown.enter="handleKeyDown"
                                 />
                             </div>
                             <div class="my_audio my_button">
