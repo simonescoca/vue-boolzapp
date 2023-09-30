@@ -11,6 +11,7 @@ body{
 /* ? DIV.CONTAINER ...............................*/
 .my_ancestor{
     height: 100vh;
+    min-width: 960px;
 }
 
 /* ? ENTIRE APP ...............................*/
